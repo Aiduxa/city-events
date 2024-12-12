@@ -1,0 +1,250 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #242222;
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #35393d;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #f1f1f1;
+}
+
+.logout-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #e60000;
+}
+
+/* Home Page Styles */
+.home-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.home-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.event-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-card h2 {
+  color: #007bff;
+  font-size: 22px;
+}
+
+.event-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* CSS for the event card layout */
+.event-card {
+  display: flex;
+  justify-content: space-between; /* Space out the content */
+  align-items: center; /* Center content vertically */
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.event-card .event-info {
+  flex-grow: 1; /* This will make the event info take up the remaining space */
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  justify-content: flex-end; /* Align stars to the right */
+}
+
+.star {
+  font-size: 24px;
+  color: #ccc;  /* Default star color (unfilled) */
+}
+
+.star.filled {
+  color: gold;  /* Filled star color */
+}
+
+/* CSS for the Create Event Form */
+.create-event-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.create-event-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.create-event-form .form-group {
+  margin-bottom: 15px;
+}
+
+.create-event-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.create-event-form input,
+.create-event-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.create-event-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.create-event-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Profile Page */
+.profile-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.events-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.event-card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.event-card h3 {
+  margin: 0 0 10px;
+}
+
+.event-card p {
+  margin: 5px 0;
+}
+
+.event-card strong {
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
